@@ -12,7 +12,7 @@ sh -c "rsync $ARGS -e 'ssh -i $SSHPATH/key -o StrictHostKeyChecking=no -p $REMOT
 
 
 #Run cmd command insid server
-ssh -i $SSHPATH/key $SERVER_DEPLOY_STRING -p $REMOTE_HOST_PORT
+ssh -i "$SSHPATH/key $SERVER_DEPLOY_STRING -p $REMOTE_HOST_PORT"
 
 cd "$TARGET_DIRECTORY" && php artisan optimize
 echo date /t >> logDeploy.txt
