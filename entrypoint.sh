@@ -14,4 +14,4 @@ sh -c "rsync $ARGS -e 'ssh -i $SSHPATH/key -o StrictHostKeyChecking=no -p $REMOT
 #Run cmd command insid server
 cd "$TARGET_DIRECTORY" && php artisan optimize
 echo date /t >> logDeploy.txt
-echo "Comando pos deploy executado  \t" >> logDeploy.txt
+echo "Comando pos deploy executado" >> logDeploy.txt
